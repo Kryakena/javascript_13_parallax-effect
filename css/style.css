@@ -1,0 +1,244 @@
+/* Обнуление */
+*,*:before,*:after{
+    padding: 0;
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+/* Стили для демонстрации */
+html,body{
+    height: 100%;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    background-color: #000;
+}
+.wrapper{
+    overflow: hidden; /* Чтобы скрыть все, что может вылезти за пределы экрана */
+}
+/* Основные стили */
+
+.page {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 360px; /* Чтобы при изменении экрана по высоте не было проблем */
+}
+
+.parallax {
+    flex: 1 0 100%; /* Разрешаем экрану в высоту увеличиваться, а уменьшаться запрещаем */
+    position: relative;
+    overflow: hidden;
+}
+.parallax:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+    background: linear-gradient(rgba(0,0,0,0) 0%, rgba(0,0,0,1) 60%);
+}
+
+.parallax_list {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+.parallax_list li {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+.parallax_bg {
+    position: absolute;
+    width: 110%;
+    height: 110%;
+    top: -5%;
+    left: -5%;
+    background: url('/img/background.jpg') 50% 100% / cover no-repeat; /* Задний фон с изображением на весь экран */
+}
+
+.parallax_rope { /* Веревки - общий для всех стиль */
+    position: absolute;
+    width: 120%;
+    left: -10%;
+}
+.parallax_rope img {
+    width: 100%;
+}
+
+.parallax_rope_1 {
+    top: 5%;
+    transform: scale(1);
+}
+.parallax_rope_2 {
+    top: -1.66667%;
+    transform: scale(1.05556);
+}
+.parallax_rope_3 {
+    top: -11.66667%;
+    transform: scale(1.13889);
+}
+
+.parallax_element {
+    position: absolute;
+}
+.parallax_element span{
+    display: inline-block;
+    transform-origin: 50% 0; /* Чтобы изменить стиль анимации */
+    width: 280px;
+    height: 280px;
+    margin: 0 0 0 -140px; /* Выводим span по середине */
+    animation: swing 2s infinite alternate cubic-bezier(0.455, 0.03, 0.515, 0.955); /* Непрерывная альтернативная анимация */
+}
+
+.parallax_element_1 {
+    top: 28%;
+    left: 20%;
+}
+.parallax_element_1 span{
+    background: url('/img/clouds/board-cloud-2.png') 0 0 / 100% no-repeat; /* Облако */
+}
+
+.parallax_element_2 {
+    top: 46%;
+    left: 40%;
+}
+.parallax_element_2 span {
+    background: url('/img/clouds/board-cloud-1.png') 0 0 / 100% no-repeat; /* Облако */
+}
+
+.parallax_element_3 {
+    top: 24%;
+    left: 80%;
+}
+.parallax_element_3 span {
+    background: url('/img/clouds/board-birds.png') 0 0 / 100% no-repeat; /* Птички */
+}
+
+.parallax_element_4 {
+    top: 10%;
+    left: 17%;
+}
+.parallax_element_4 span {
+    background: url('/img/clouds/board-cloud-1.png') 0 0 / 100% no-repeat; /* Облака */
+}
+
+.parallax_element_5 {
+    top: 50%;
+    left: 56%;
+}
+.parallax_element_5 span {
+    background: url('/img/clouds/board-cloud-4.png') 0 0 / 100% no-repeat; /* Облака */
+}
+
+.parallax_element_6 {
+    top: 30%;
+    left: 57%;
+}
+.parallax_element_6 span {
+    background: url('/img/clouds/board-birds.png') 0 0 / 100% no-repeat; /* Птички */
+}
+
+.parallax_element_7 {
+    top: 60%;
+    left: 65%;
+}
+.parallax_element_7 span {
+    background: url('/img/clouds/board-cloud-2.png') 0 0 / 100% no-repeat; /* Облака */
+}
+
+.parallax_element_8 {
+    top: 80%;
+    left: 45%;
+}
+.parallax_element_8 span {
+    background: url('/img/clouds/board-cloud-3.png') 0 0 / 100% no-repeat; /* Облака */
+}
+
+.parallax_wave {
+    position: absolute;
+    background: url('/img/waves/wave-plain.png') 0 0 / auto 101% repeat-x;
+    left: -100%;
+    width: 300%;
+}
+
+.parallax_wave_1 {
+    bottom: 180px;
+    height: 86px;
+    animation: wave 7.11111s 0.1s infinite linear;
+    background: url('/img/waves/wave-paint.png') 0 0 / auto 101% repeat-x;
+}
+.parallax_wave_2 {
+    bottom: 144px;
+    height: 115px;
+    animation: wave 6.66667s 0.1s infinite linear;
+}
+.parallax_wave_3 {
+    bottom: 108px;
+    height: 144px;
+    animation: wave 6.22222s 0.1s infinite linear;
+    background: url('/img/waves/wave-paint.png') 0 0 / auto 101% repeat-x;
+}
+.parallax_wave_4 {
+    animation: wave 5.77778s 0.1s infinite linear;
+    bottom: 72px;
+    height: 173px;
+}
+.parallax_wave_5 {
+    animation: wave 4.8888s 0.1s infinite linear;
+    bottom: -1px;
+    height: 230px;
+}
+.parallax_wave_6 {
+    animation: wave 4.5s 0.1s infinite linear;
+    height: 288px;
+    background: url('/img/waves/wave-paint.png') 0 0 / auto 101% repeat-x;
+    bottom: -72px;
+}
+
+.parallax_litehouse {
+    background: url('/img/lighthouse.png') 0 0 no-repeat;
+    width: 320px;
+    height: 560px;
+    position: absolute;
+    right: 12%;
+    bottom: 50px;
+    animation: lighthouse 4s 0.1s infinite alternate cubic-bezier(0.455, 0.03, 0.515, 0.955);
+}
+
+.content {}
+
+@keyframes swing { /* Движение птиц и облаков вправо влево */
+    0%{
+        transform: rotate(10deg);
+    }
+    100%{
+        transform: rotate(-10deg);
+    }
+}
+
+@keyframes wave { /* Движение волн по кругу */
+    0%{
+        transform: rotateZ(0deg) translate3d(0,10%,0) rotateZ(0deg);
+    }
+    100%{
+        transform: rotateZ(360deg) translate3d(0,10%,0) rotateZ(-360deg);
+    }
+}
+
+@keyframes lighthouse { /* Покачивание маяка */
+    0%{
+        transform: translate3d(15%,0,0) rotateZ(10deg);
+    }
+    100%{
+        transform: translate3d(15%,0,0) rotateZ(-10deg);
+    }
+}
