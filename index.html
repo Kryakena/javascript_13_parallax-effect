@@ -1,0 +1,82 @@
+<!-- Сообщаем браузеру, как стоит обрабатывать эту страницу -->
+<!DOCTYPE html>
+<!-- Оболочка документа, указываем язык содержимого -->
+<html lang="ru">
+<!-- Заголовок страницы, контейнер для других важных данных (не отображается) -->
+<head>
+    <!-- Заголовок страницы в браузере -->
+    <title>Параллакс-эффект Matthew Wagerfield</title>
+    <!-- Подключаем CSS -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Кодировка страницы -->
+    <meta charset="utf-8">
+    <!-- Адаптив -->
+    <meta name="viewport" content="width=device-width">
+</head>
+<!-- Отображаемое тело страницы -->
+<body>
+<!-- Оболочка для демонстрации -->
+<div class="wrapper">
+    <!-- Контент -->
+    <div class="page">
+        <div class="parallax">
+            <ul class="parallax_list">
+                <li>
+                    <div class="parallax_bg"></div>
+                </li>
+                <li>
+                    <div class="parallax_rope parallax_rope_1">
+                        <div class="parallax_element parallax_element_1"><span></span></div>
+                        <div class="parallax_element parallax_element_2"><span></span></div>
+                        <div class="parallax_element parallax_element_3"><span></span></div>
+                        <img src="rope.png" alt="">
+                    </div>
+                </li>
+                <li>
+                    <div class="parallax_rope parallax_rope_2">
+                        <div class="parallax_element parallax_element_4"><span></span></div>
+                        <div class="parallax_element parallax_element_5"><span></span></div>
+                        <img src="rope.png" alt="">
+                    </div>
+                </li>
+                <li>
+                    <div class="parallax_rope parallax_rope_3">
+                        <div class="parallax_element parallax_element_6"><span></span></div>
+                        <div class="parallax_element parallax_element_7"><span></span></div>
+                        <div class="parallax_element parallax_element_8"><span></span></div>
+                        <img src="rope.png" alt="">
+                    </div>
+                </li>
+                <li>
+                    <div class="parallax_wave parallax_wave_1"></div>
+                </li>
+                <li>
+                    <div class="parallax_wave parallax_wave_2"></div>
+                </li>
+                <li>
+                    <div class="parallax_wave parallax_wave_3"></div>
+                </li>
+                <li>
+                    <div class="parallax_litehouse"></div>
+                </li>
+                <li>
+                    <div class="parallax_wave parallax_wave_4"></div>
+                </li>
+                <li>
+                    <div class="parallax_wave parallax_wave_5"></div>
+                </li>
+                <li>
+                    <div class="parallax_wave parallax_wave_6"></div>
+                </li>
+            </ul>
+        </div>
+        <div class="content"></div>
+    </div>
+    <!-- Подключаем jQuery -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <!-- Подключаем файл JS скриптов -->
+    <script src="jquery.parallax.js"></script>
+    <script src="script.js"></script>
+</div>
+</body>
+</html>
