@@ -526,7 +526,7 @@ html,body{
 }
 ```
 
-34. в файле style.css 
+34. в файле style.css анимация маяка
 
 ```css
 @keyframes lighthouse { /* Покачивание маяка */
@@ -534,7 +534,16 @@ html,body{
         transform: translate3d(15%,0,0) rotateZ(10deg);
     }
     100%{
-        transform: translate3d(15%,0,0) rotateZ(-10deg);
+        transform: translate3d(-15%,0,0) rotateZ(-10deg);
     }
 }
+```
+
+35. в файле script.js для улучшения общей анимации
+
+```js
+$(document).ready(function () {
+
+    $('.wrapper').addClass('active');
+});
 ```

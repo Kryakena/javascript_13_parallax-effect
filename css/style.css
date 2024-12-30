@@ -239,6 +239,6 @@ html,body{
         transform: translate3d(15%,0,0) rotateZ(10deg);
     }
     100%{
-        transform: translate3d(15%,0,0) rotateZ(-10deg);
+        transform: translate3d(-15%,0,0) rotateZ(-10deg);
     }
 }
