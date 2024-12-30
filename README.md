@@ -539,7 +539,7 @@ html,body{
 }
 ```
 
-35. в файле script.js для улучшения общей анимации
+35. в файле script.js для улучшения общей анимации (когда прогрузятся скрипты, то будут анимации)
 
 ```js
 $(document).ready(function () {
@@ -547,3 +547,108 @@ $(document).ready(function () {
     $('.wrapper').addClass('active');
 });
 ```
+
+36. в файле style.css в классе .wrapper вставляем стили
+
+```css
+opacity: 0;
+transition: all 1.0s ease 0s;
+```
+
+37. в файле style.css создаем .wrapper.active - теперь можем применять стиль благодаря js скрипту
+
+```css
+.wrapper.active{
+    opacity: 1;
+}
+```
+
+38. в файле style.css настраиваем очередь загрузки анимации элементов согласно сценарию
+
+```css
+.wrapper.active .parallax_wave{ /* Можем постепенно показывать наши волны */
+    opacity: 1;
+    transition: all 1.0s ease 1.0s; /* Анимация с задержкой, т.к. у нас есть сценарий появления наших элементов */
+}
+.wrapper.active .parallax_rope { /* Очередь загрузки анимации веревки */
+    opacity: 1;
+    transition: all 1.0s ease 1.8s;
+}
+.wrapper.active .parallax_litehouse { /* Очередь загрузки анимации маяка */
+    bottom: 130px;
+    transition: all 0.8s ease 2.5s;
+}
+```
+
+39. в файле style.css - возвращаемся к нашим элементам и меняем значения, чтобы изначально они были скрыты
+
+.parallax_litehouse меняем значение bottom
+```css
+bottom: -100%; /* Было 50px, потом поменяли на -100%, чтобы маяка не было видно при загрузке */
+```
+
+.parallax_wave добавляем
+```css
+opacity: 0;
+```
+
+.parallax_rope добавляем
+```css
+opacity: 0;
+```
+
+40. в файле script.js обращаемся ко всему списку в $(document).ready(function ()
+
+```js
+$('.parallax_list>li').addClass('layer'); // Обращаемся ко всему списку li
+$('.parallax_list').parallax(); // Анимация реагирует на движение мышкой
+```
+
+41. в файле index.html, уровень реакции на мышку
+
+бэкграунд
+```html
+<li data-depth="0.10">
+```
+1 веревка
+```html
+<li data-depth="0.15">
+```
+2 веревка
+```html
+<li  data-depth="0.30">
+```
+3 веревка
+```html
+<li data-depth="0.60">
+```
+1 волна
+```html
+<li data-depth="0.30">
+```
+2 волна
+```html
+<li data-depth="0.40">
+```
+3 волна
+```html
+<li data-depth="0.50">
+```
+маяк
+```html
+<li data-depth="0.60">
+```
+4 волна
+```html
+<li data-depth="0.60">
+```
+5 волна
+```html
+<li data-depth="0.80">
+```
+6 волна
+```html
+<li data-depth="1.00">
+```
+
+

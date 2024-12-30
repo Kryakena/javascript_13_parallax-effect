@@ -13,8 +13,26 @@ html,body{
 }
 .wrapper{
     overflow: hidden; /* Чтобы скрыть все, что может вылезти за пределы экрана */
+    opacity: 0;
+    transition: all 1.0s ease 0s;
 }
 /* Основные стили */
+
+.wrapper.active{
+    opacity: 1;
+}
+.wrapper.active .parallax_wave{ /* Можем постепенно показывать наши волны */
+    opacity: 1;
+    transition: all 1.0s ease 1.0s; /* Анимация с задержкой, т.к. у нас есть сценарий появления наших элементов */
+}
+.wrapper.active .parallax_rope { /* Очередь загрузки анимации веревки */
+    opacity: 1;
+    transition: all 1.0s ease 1.8s;
+}
+.wrapper.active .parallax_litehouse { /* Очередь загрузки анимации маяка */
+    bottom: 130px;
+    transition: all 0.8s ease 2.5s;
+}
 
 .page {
     position: absolute;
@@ -69,6 +87,7 @@ html,body{
     position: absolute;
     width: 120%;
     left: -10%;
+    opacity: 0;
 }
 .parallax_rope img {
     width: 100%;
@@ -168,6 +187,7 @@ html,body{
     background: url('/img/waves/wave-plain.png') 0 0 / auto 101% repeat-x;
     left: -100%;
     width: 300%;
+    opacity: 0;
 }
 
 .parallax_wave_1 {
@@ -210,7 +230,7 @@ html,body{
     height: 560px;
     position: absolute;
     right: 12%;
-    bottom: 50px;
+    bottom: -100%; /* Было 50px, потом поменяли на -100%, чтобы маяка не было видно при загрузке */
     animation: lighthouse 4s 0.1s infinite alternate cubic-bezier(0.455, 0.03, 0.515, 0.955);
 }
 
