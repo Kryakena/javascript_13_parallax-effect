@@ -305,7 +305,7 @@ html,body{
     height: 110%;
     top: -5%;
     left: -5%;
-    background: url('/img/background.jpg') 50% 100% / cover no-repeat; /* Задний фон с изображением на весь экран */
+    background: url('../img/background.jpg') 50% 100% / cover no-repeat; /* Задний фон с изображением на весь экран */
 }
 ```
 
@@ -385,7 +385,7 @@ html,body{
     left: 20%;
 }
 .parallax_element_1 span{
-    background: url('/img/clouds/board-cloud-2.png') 0 0 / 100% no-repeat; /* Облако */
+    background: url('../img/clouds/board-cloud-2.png') 0 0 / 100% no-repeat; /* Облако */
 }
 
 .parallax_element_2 {
@@ -393,7 +393,7 @@ html,body{
     left: 40%;
 }
 .parallax_element_2 span {
-    background: url('/img/clouds/board-cloud-1.png') 0 0 / 100% no-repeat; /* Облако */
+    background: url('../img/clouds/board-cloud-1.png') 0 0 / 100% no-repeat; /* Облако */
 }
 
 .parallax_element_3 {
@@ -401,7 +401,7 @@ html,body{
     left: 80%;
 }
 .parallax_element_3 span {
-    background: url('/img/clouds/board-birds.png') 0 0 / 100% no-repeat; /* Птички */
+    background: url('../img/clouds/board-birds.png') 0 0 / 100% no-repeat; /* Птички */
 }
 
 .parallax_element_4 {
@@ -409,7 +409,7 @@ html,body{
     left: 17%;
 }
 .parallax_element_4 span {
-    background: url('/img/clouds/board-cloud-1.png') 0 0 / 100% no-repeat; /* Облака */
+    background: url('../img/clouds/board-cloud-1.png') 0 0 / 100% no-repeat; /* Облака */
 }
 
 .parallax_element_5 {
@@ -417,7 +417,7 @@ html,body{
     left: 56%;
 }
 .parallax_element_5 span {
-    background: url('/img/clouds/board-cloud-4.png') 0 0 / 100% no-repeat; /* Облака */
+    background: url('../img/clouds/board-cloud-4.png') 0 0 / 100% no-repeat; /* Облака */
 }
 
 .parallax_element_6 {
@@ -425,7 +425,7 @@ html,body{
     left: 57%;
 }
 .parallax_element_6 span {
-    background: url('/img/clouds/board-birds.png') 0 0 / 100% no-repeat; /* Птички */
+    background: url('../img/clouds/board-birds.png') 0 0 / 100% no-repeat; /* Птички */
 }
 
 .parallax_element_7 {
@@ -433,7 +433,7 @@ html,body{
     left: 65%;
 }
 .parallax_element_7 span {
-    background: url('/img/clouds/board-cloud-2.png') 0 0 / 100% no-repeat; /* Облака */
+    background: url('../img/clouds/board-cloud-2.png') 0 0 / 100% no-repeat; /* Облака */
 }
 
 .parallax_element_8 {
@@ -441,7 +441,7 @@ html,body{
     left: 45%;
 }
 .parallax_element_8 span {
-    background: url('/img/clouds/board-cloud-3.png') 0 0 / 100% no-repeat; /* Облака */
+    background: url('../img/clouds/board-cloud-3.png') 0 0 / 100% no-repeat; /* Облака */
 }
 ```
 
@@ -450,7 +450,7 @@ html,body{
 ```css
 .parallax_wave {
     position: absolute;
-    background: url('/img/waves/wave-plain.png') 0 0 / auto 101% repeat-x;
+    background: url('../img/waves/wave-plain.png') 0 0 / auto 101% repeat-x;
     left: -100%;
     width: 300%;
 }
@@ -463,7 +463,7 @@ html,body{
     bottom: 180px;
     height: 86px;
     animation: wave 7.11111s 0.1s infinite linear;
-    background: url('/img/waves/wave-paint.png') 0 0 / auto 101% repeat-x;
+    background: url('../img/waves/wave-paint.png') 0 0 / auto 101% repeat-x;
 }
 .parallax_wave_2 {
     bottom: 144px;
@@ -474,7 +474,7 @@ html,body{
     bottom: 108px;
     height: 144px;
     animation: wave 6.22222s 0.1s infinite linear;
-    background: url('/img/waves/wave-paint.png') 0 0 / auto 101% repeat-x;
+    background: url('../img/waves/wave-paint.png') 0 0 / auto 101% repeat-x;
 }
 .parallax_wave_4 {
     animation: wave 5.77778s 0.1s infinite linear;
@@ -489,7 +489,7 @@ html,body{
 .parallax_wave_6 {
     animation: wave 4.5s 0.1s infinite linear;
     height: 288px;
-    background: url('/img/waves/wave-paint.png') 0 0 / auto 101% repeat-x;
+    background: url('../img/waves/wave-paint.png') 0 0 / auto 101% repeat-x;
     bottom: -72px;
 }
 ```
@@ -498,7 +498,7 @@ html,body{
 
 ```css
 .parallax_litehouse {
-    background: url('/img/lighthouse.png') 0 0 no-repeat;
+    background: url('../img/lighthouse.png') 0 0 no-repeat;
     width: 320px;
     height: 560px;
     position: absolute;
@@ -760,7 +760,7 @@ html,body{
     height: 110%;
     top: -5%;
     left: -5%;
-    background: url('/img/background.jpg') 50% 100% / cover no-repeat; /* Задний фон с изображением на весь экран */
+    background: url('../img/background.jpg') 50% 100% / cover no-repeat; /* Задний фон с изображением на весь экран */
 }
 
 .parallax_rope { /* Веревки - общий для всех стиль */
@@ -813,7 +813,7 @@ html,body{
     left: 20%;
 }
 .parallax_element_1 span{
-    background: url('/img/clouds/board-cloud-2.png') 0 0 / 100% no-repeat; /* Облако */
+    background: url('../img/clouds/board-cloud-2.png') 0 0 / 100% no-repeat; /* Облако */
 }
 
 .parallax_element_2 {
@@ -821,7 +821,7 @@ html,body{
     left: 40%;
 }
 .parallax_element_2 span {
-    background: url('/img/clouds/board-cloud-1.png') 0 0 / 100% no-repeat; /* Облако */
+    background: url('../img/clouds/board-cloud-1.png') 0 0 / 100% no-repeat; /* Облако */
 }
 
 .parallax_element_3 {
@@ -829,7 +829,7 @@ html,body{
     left: 80%;
 }
 .parallax_element_3 span {
-    background: url('/img/clouds/board-birds.png') 0 0 / 100% no-repeat; /* Птички */
+    background: url('../img/clouds/board-birds.png') 0 0 / 100% no-repeat; /* Птички */
 }
 
 .parallax_element_4 {
@@ -837,7 +837,7 @@ html,body{
     left: 17%;
 }
 .parallax_element_4 span {
-    background: url('/img/clouds/board-cloud-1.png') 0 0 / 100% no-repeat; /* Облака */
+    background: url('../img/clouds/board-cloud-1.png') 0 0 / 100% no-repeat; /* Облака */
 }
 
 .parallax_element_5 {
@@ -845,7 +845,7 @@ html,body{
     left: 56%;
 }
 .parallax_element_5 span {
-    background: url('/img/clouds/board-cloud-4.png') 0 0 / 100% no-repeat; /* Облака */
+    background: url('../img/clouds/board-cloud-4.png') 0 0 / 100% no-repeat; /* Облака */
 }
 
 .parallax_element_6 {
@@ -853,7 +853,7 @@ html,body{
     left: 57%;
 }
 .parallax_element_6 span {
-    background: url('/img/clouds/board-birds.png') 0 0 / 100% no-repeat; /* Птички */
+    background: url('../img/clouds/board-birds.png') 0 0 / 100% no-repeat; /* Птички */
 }
 
 .parallax_element_7 {
@@ -861,7 +861,7 @@ html,body{
     left: 65%;
 }
 .parallax_element_7 span {
-    background: url('/img/clouds/board-cloud-2.png') 0 0 / 100% no-repeat; /* Облака */
+    background: url('../img/clouds/board-cloud-2.png') 0 0 / 100% no-repeat; /* Облака */
 }
 
 .parallax_element_8 {
@@ -869,12 +869,12 @@ html,body{
     left: 45%;
 }
 .parallax_element_8 span {
-    background: url('/img/clouds/board-cloud-3.png') 0 0 / 100% no-repeat; /* Облака */
+    background: url('../img/clouds/board-cloud-3.png') 0 0 / 100% no-repeat; /* Облака */
 }
 
 .parallax_wave {
     position: absolute;
-    background: url('/img/waves/wave-plain.png') 0 0 / auto 101% repeat-x;
+    background: url('../img/waves/wave-plain.png') 0 0 / auto 101% repeat-x;
     left: -100%;
     width: 300%;
     opacity: 0;
@@ -884,7 +884,7 @@ html,body{
     bottom: 180px;
     height: 86px;
     animation: wave 7.11111s 0.1s infinite linear;
-    background: url('/img/waves/wave-paint.png') 0 0 / auto 101% repeat-x;
+    background: url('../img/waves/wave-paint.png') 0 0 / auto 101% repeat-x;
 }
 .parallax_wave_2 {
     bottom: 144px;
@@ -895,7 +895,7 @@ html,body{
     bottom: 108px;
     height: 144px;
     animation: wave 6.22222s 0.1s infinite linear;
-    background: url('/img/waves/wave-paint.png') 0 0 / auto 101% repeat-x;
+    background: url('../img/waves/wave-paint.png') 0 0 / auto 101% repeat-x;
 }
 .parallax_wave_4 {
     animation: wave 5.77778s 0.1s infinite linear;
@@ -910,12 +910,12 @@ html,body{
 .parallax_wave_6 {
     animation: wave 4.5s 0.1s infinite linear;
     height: 288px;
-    background: url('/img/waves/wave-paint.png') 0 0 / auto 101% repeat-x;
+    background: url('../img/waves/wave-paint.png') 0 0 / auto 101% repeat-x;
     bottom: -72px;
 }
 
 .parallax_litehouse {
-    background: url('/img/lighthouse.png') 0 0 no-repeat;
+    background: url('../img/lighthouse.png') 0 0 no-repeat;
     width: 320px;
     height: 560px;
     position: absolute;
