@@ -1,7 +1,15 @@
-# Параллакс-эффект на сайте
+# 🕊 Параллакс-эффект на сайте 🕊
 
 Источник: видео "Параллакс анимация сайта Matthew Wagerfield (parallax.js) на CSS3 HTML jQuery // Как это сделать?" 
 https://vk.com/im/convo/19460369?entrypoint=list_all&z=video-125918837_456239143%2F770e7f00fe8f3b6747
+
+![2024-12-31_14-10-35](https://github.com/user-attachments/assets/e8e29535-7cbb-44ae-acd9-38506fda8529)
+
+
+
+https://github.com/user-attachments/assets/4535497d-bf79-4aaf-b852-9f57aecffbe5
+
+
 
 1. создаем создаем файлы index.html, style.css (в папке css), script.js (в папке js) в папке проекта. 
 Скачиваем готовые шаблоны изображений (в папку img) и файл js (положить в папку js) и вставляем в папку проекта: 
@@ -946,6 +954,14 @@ html,body{
 }
 ```
 
+![2024-12-31_14-25-13](https://github.com/user-attachments/assets/8ad0ba4b-c4b5-4379-b57a-25550ed6f65c)
+![2024-12-31_14-25-32](https://github.com/user-attachments/assets/315817bf-38c4-41da-8853-eacb6bd1c867)
+![2024-12-31_14-25-47](https://github.com/user-attachments/assets/d3bf654a-b08c-47eb-873b-20b9145452b3)
+![2024-12-31_14-26-02](https://github.com/user-attachments/assets/098cd8d3-cb64-466d-9ebe-c30df4291016)
+![2024-12-31_14-26-18](https://github.com/user-attachments/assets/0b9b8168-fcf6-4353-ac4a-b574d4cf01b0)
+![2024-12-31_14-26-29](https://github.com/user-attachments/assets/c4d50c73-a692-47ca-9cb5-02d6b91a87ed)
+
+
 2. файл index.html
 
 ```html
@@ -1034,6 +1050,10 @@ html,body{
 </html>
 ```
 
+![2024-12-31_14-24-07](https://github.com/user-attachments/assets/d3d30535-acfc-4a32-bc58-523cc2d7021c)
+![2024-12-31_14-24-19](https://github.com/user-attachments/assets/5d34fb88-b3a2-4ab9-b789-2b1ee6ae6b95)
+
+
 3. файл script.js
 
 ```js
@@ -1044,3 +1064,5 @@ $(document).ready(function () {
     $('.wrapper').addClass('active');
 });
 ```
+
+![2024-12-31_14-26-56](https://github.com/user-attachments/assets/9772aca3-cf83-41c0-b89f-32a100fad235)
