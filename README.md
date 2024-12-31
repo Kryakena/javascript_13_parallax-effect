@@ -1046,6 +1046,17 @@ html,body{
     <script src="js/jquery.parallax.js"></script>
     <script src="js/script.js"></script>
 </div>
+    <!-- Подключаем файл изображений для успешного отображения на GitHub, все, кроме веревок (rope) -->
+    <img id="background" src="img/background.jpg">
+    <img id="lighthouse" src="img/lighthouse.png">
+    <img id="rope" src="img/rope.png">
+    <img id="board-birds" src="img/clouds/board-birds.png">
+    <img id="board-cloud-1" src="img/clouds/board-cloud-1.png">
+    <img id="board-cloud-2" src="img/clouds/board-cloud-2.png">
+    <img id="board-cloud-3" src="img/clouds/board-cloud-3.png">
+    <img id="board-cloud-4" src="img/clouds/board-cloud-4.png">
+    <img id="wave-paint" src="img/waves/wave-paint.png">
+    <img id="wave-plain" src="img/waves/wave-plain.png">
 </body>
 </html>
 ```
