@@ -651,4 +651,396 @@ $('.parallax_list').parallax(); // Анимация реагирует на дв
 <li data-depth="1.00">
 ```
 
+42. в файле style.css у каждого элемента на веревке пишем реакцию на наведение курсора
 
+```css
+.parallax_rope_1 .parallax_element{
+    transform: scale(0.6);
+}
+.parallax_rope_2 .parallax_element{
+    transform: scale(0.75556);
+}
+.parallax_rope_3 .parallax_element{
+    transform: scale(0.98889);
+}
+```
+
+# Итог
+
+1. файл style.css
+
+```css
+/* Обнуление */
+*,*:before,*:after{
+    padding: 0;
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+/* Стили для демонстрации */
+html,body{
+    height: 100%;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    background-color: #000;
+}
+.wrapper{
+    overflow: hidden; /* Чтобы скрыть все, что может вылезти за пределы экрана */
+    opacity: 0;
+    transition: all 1.0s ease 0s;
+}
+/* Основные стили */
+
+.wrapper.active{
+    opacity: 1;
+}
+.wrapper.active .parallax_wave{ /* Можем постепенно показывать наши волны */
+    opacity: 1;
+    transition: all 1.0s ease 1.0s; /* Анимация с задержкой, т.к. у нас есть сценарий появления наших элементов */
+}
+.wrapper.active .parallax_rope { /* Очередь загрузки анимации веревки */
+    opacity: 1;
+    transition: all 1.0s ease 1.8s;
+}
+.wrapper.active .parallax_litehouse { /* Очередь загрузки анимации маяка */
+    bottom: 130px;
+    transition: all 0.8s ease 2.5s;
+}
+
+.page {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 360px; /* Чтобы при изменении экрана по высоте не было проблем */
+}
+
+.parallax {
+    flex: 1 0 100%; /* Разрешаем экрану в высоту увеличиваться, а уменьшаться запрещаем */
+    position: relative;
+    overflow: hidden;
+}
+.parallax:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+    background: linear-gradient(rgba(0,0,0,0) 0%, rgba(0,0,0,1) 60%);
+}
+
+.parallax_list {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+.parallax_list li {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+.parallax_bg {
+    position: absolute;
+    width: 110%;
+    height: 110%;
+    top: -5%;
+    left: -5%;
+    background: url('/img/background.jpg') 50% 100% / cover no-repeat; /* Задний фон с изображением на весь экран */
+}
+
+.parallax_rope { /* Веревки - общий для всех стиль */
+    position: absolute;
+    width: 120%;
+    left: -10%;
+    opacity: 0;
+}
+.parallax_rope img {
+    width: 100%;
+}
+
+.parallax_rope_1 {
+    top: 5%;
+    transform: scale(1);
+}
+.parallax_rope_2 {
+    top: -1.66667%;
+    transform: scale(1.05556);
+}
+.parallax_rope_3 {
+    top: -11.66667%;
+    transform: scale(1.13889);
+}
+
+.parallax_rope_1 .parallax_element{
+    transform: scale(0.6);
+}
+.parallax_rope_2 .parallax_element{
+    transform: scale(0.75556);
+}
+.parallax_rope_3 .parallax_element{
+    transform: scale(0.98889);
+}
+
+.parallax_element {
+    position: absolute;
+}
+.parallax_element span{
+    display: inline-block;
+    transform-origin: 50% 0; /* Чтобы изменить стиль анимации */
+    width: 280px;
+    height: 280px;
+    margin: 0 0 0 -140px; /* Выводим span по середине */
+    animation: swing 2s infinite alternate cubic-bezier(0.455, 0.03, 0.515, 0.955); /* Непрерывная альтернативная анимация */
+}
+
+.parallax_element_1 {
+    top: 28%;
+    left: 20%;
+}
+.parallax_element_1 span{
+    background: url('/img/clouds/board-cloud-2.png') 0 0 / 100% no-repeat; /* Облако */
+}
+
+.parallax_element_2 {
+    top: 46%;
+    left: 40%;
+}
+.parallax_element_2 span {
+    background: url('/img/clouds/board-cloud-1.png') 0 0 / 100% no-repeat; /* Облако */
+}
+
+.parallax_element_3 {
+    top: 24%;
+    left: 80%;
+}
+.parallax_element_3 span {
+    background: url('/img/clouds/board-birds.png') 0 0 / 100% no-repeat; /* Птички */
+}
+
+.parallax_element_4 {
+    top: 10%;
+    left: 17%;
+}
+.parallax_element_4 span {
+    background: url('/img/clouds/board-cloud-1.png') 0 0 / 100% no-repeat; /* Облака */
+}
+
+.parallax_element_5 {
+    top: 50%;
+    left: 56%;
+}
+.parallax_element_5 span {
+    background: url('/img/clouds/board-cloud-4.png') 0 0 / 100% no-repeat; /* Облака */
+}
+
+.parallax_element_6 {
+    top: 30%;
+    left: 57%;
+}
+.parallax_element_6 span {
+    background: url('/img/clouds/board-birds.png') 0 0 / 100% no-repeat; /* Птички */
+}
+
+.parallax_element_7 {
+    top: 60%;
+    left: 65%;
+}
+.parallax_element_7 span {
+    background: url('/img/clouds/board-cloud-2.png') 0 0 / 100% no-repeat; /* Облака */
+}
+
+.parallax_element_8 {
+    top: 80%;
+    left: 45%;
+}
+.parallax_element_8 span {
+    background: url('/img/clouds/board-cloud-3.png') 0 0 / 100% no-repeat; /* Облака */
+}
+
+.parallax_wave {
+    position: absolute;
+    background: url('/img/waves/wave-plain.png') 0 0 / auto 101% repeat-x;
+    left: -100%;
+    width: 300%;
+    opacity: 0;
+}
+
+.parallax_wave_1 {
+    bottom: 180px;
+    height: 86px;
+    animation: wave 7.11111s 0.1s infinite linear;
+    background: url('/img/waves/wave-paint.png') 0 0 / auto 101% repeat-x;
+}
+.parallax_wave_2 {
+    bottom: 144px;
+    height: 115px;
+    animation: wave 6.66667s 0.1s infinite linear;
+}
+.parallax_wave_3 {
+    bottom: 108px;
+    height: 144px;
+    animation: wave 6.22222s 0.1s infinite linear;
+    background: url('/img/waves/wave-paint.png') 0 0 / auto 101% repeat-x;
+}
+.parallax_wave_4 {
+    animation: wave 5.77778s 0.1s infinite linear;
+    bottom: 72px;
+    height: 173px;
+}
+.parallax_wave_5 {
+    animation: wave 4.8888s 0.1s infinite linear;
+    bottom: -1px;
+    height: 230px;
+}
+.parallax_wave_6 {
+    animation: wave 4.5s 0.1s infinite linear;
+    height: 288px;
+    background: url('/img/waves/wave-paint.png') 0 0 / auto 101% repeat-x;
+    bottom: -72px;
+}
+
+.parallax_litehouse {
+    background: url('/img/lighthouse.png') 0 0 no-repeat;
+    width: 320px;
+    height: 560px;
+    position: absolute;
+    right: 12%;
+    bottom: -100%; /* Было 50px, потом поменяли на -100%, чтобы маяка не было видно при загрузке */
+    animation: lighthouse 4s 0.1s infinite alternate cubic-bezier(0.455, 0.03, 0.515, 0.955);
+}
+
+.content {}
+
+@keyframes swing { /* Движение птиц и облаков вправо влево */
+    0%{
+        transform: rotate(10deg);
+    }
+    100%{
+        transform: rotate(-10deg);
+    }
+}
+
+@keyframes wave { /* Движение волн по кругу */
+    0%{
+        transform: rotateZ(0deg) translate3d(0,10%,0) rotateZ(0deg);
+    }
+    100%{
+        transform: rotateZ(360deg) translate3d(0,10%,0) rotateZ(-360deg);
+    }
+}
+
+@keyframes lighthouse { /* Покачивание маяка */
+    0%{
+        transform: translate3d(15%,0,0) rotateZ(10deg);
+    }
+    100%{
+        transform: translate3d(-15%,0,0) rotateZ(-10deg);
+    }
+}
+```
+
+2. файл index.html
+
+```html
+<!-- Сообщаем браузеру, как стоит обрабатывать эту страницу -->
+<!DOCTYPE html>
+<!-- Оболочка документа, указываем язык содержимого -->
+<html lang="ru">
+<!-- Заголовок страницы, контейнер для других важных данных (не отображается) -->
+<head>
+    <!-- Заголовок страницы в браузере -->
+    <title>Параллакс-эффект Matthew Wagerfield</title>
+    <!-- Подключаем CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Кодировка страницы -->
+    <meta charset="utf-8">
+    <!-- Адаптив -->
+    <meta name="viewport" content="width=device-width">
+</head>
+<!-- Отображаемое тело страницы -->
+<body>
+<!-- Оболочка для демонстрации -->
+<div class="wrapper">
+    <!-- Контент -->
+    <div class="page">
+        <div class="parallax">
+            <ul class="parallax_list">
+                <li data-depth="0.10">
+                    <!-- Уровень реакции на мышку -->
+                    <div class="parallax_bg"></div>
+                </li>
+                <li data-depth="0.15">
+                    <div class="parallax_rope parallax_rope_1">
+                        <div class="parallax_element parallax_element_1"><span></span></div>
+                        <div class="parallax_element parallax_element_2"><span></span></div>
+                        <div class="parallax_element parallax_element_3"><span></span></div>
+                        <img src="img/rope.png" alt="">
+                    </div>
+                </li>
+                <li  data-depth="0.30">
+                    <div class="parallax_rope parallax_rope_2">
+                        <div class="parallax_element parallax_element_4"><span></span></div>
+                        <div class="parallax_element parallax_element_5"><span></span></div>
+                        <img src="img/rope.png" alt="">
+                    </div>
+                </li>
+                <li data-depth="0.60">
+                    <div class="parallax_rope parallax_rope_3">
+                        <div class="parallax_element parallax_element_6"><span></span></div>
+                        <div class="parallax_element parallax_element_7"><span></span></div>
+                        <div class="parallax_element parallax_element_8"><span></span></div>
+                        <img src="img/rope.png" alt="">
+                    </div>
+                </li>
+                <li data-depth="0.30">
+                    <div class="parallax_wave parallax_wave_1"></div>
+                </li>
+                <li data-depth="0.40">
+                    <div class="parallax_wave parallax_wave_2"></div>
+                </li>
+                <li data-depth="0.50">
+                    <div class="parallax_wave parallax_wave_3"></div>
+                </li>
+                <li data-depth="0.60">
+                    <div class="parallax_litehouse"></div>
+                </li>
+                <li data-depth="0.60">
+                    <div class="parallax_wave parallax_wave_4"></div>
+                </li>
+                <li data-depth="0.80">
+                    <div class="parallax_wave parallax_wave_5"></div>
+                </li>
+                <li data-depth="1.00">
+                    <div class="parallax_wave parallax_wave_6"></div>
+                </li>
+            </ul>
+        </div>
+        <div class="content"></div>
+    </div>
+    <!-- Подключаем jQuery -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <!-- Подключаем файл JS скриптов -->
+    <script src="js/jquery.parallax.js"></script>
+    <script src="js/script.js"></script>
+</div>
+</body>
+</html>
+```
+
+3. файл script.js
+
+```js
+$(document).ready(function () {
+    $('.parallax_list>li').addClass('layer'); // Обращаемся ко всему списку li
+    $('.parallax_list').parallax(); // Анимация реагирует на движение мышкой
+
+    $('.wrapper').addClass('active');
+});
+```

@@ -106,6 +106,16 @@ html,body{
     transform: scale(1.13889);
 }
 
+.parallax_rope_1 .parallax_element{
+    transform: scale(0.6);
+}
+.parallax_rope_2 .parallax_element{
+    transform: scale(0.75556);
+}
+.parallax_rope_3 .parallax_element{
+    transform: scale(0.98889);
+}
+
 .parallax_element {
     position: absolute;
 }
